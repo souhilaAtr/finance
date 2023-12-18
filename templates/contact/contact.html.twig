@@ -1,0 +1,37 @@
+{# templates/contact/contact.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+        <h1 class="mt-5">Contactez-nous</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% if app.flashes('success') %}
+                    {% for flashMessage in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ flashMessage }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                {{ form_start(form) }}
+                <div class="mb-3">
+                    {{ form_row(form.name, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_row(form.message, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

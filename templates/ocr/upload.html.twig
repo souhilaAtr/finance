@@ -1,0 +1,20 @@
+{# templates/ocr/upload.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Upload File{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Charger un fichier</h1>
+
+        <form method="post" action="{{ path('process_file') }}" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="file" class="form-label">Téléversez votre fichier :</label>
+                <input type="file" class="form-control" name="file" id="file" accept="image/*, application/pdf" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Téléverser</button>
+        </form>
+    </div>
+{% endblock %}

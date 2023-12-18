@@ -1,0 +1,183 @@
+/* app.css */
+
+/* Global Styles */
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #555555, #aaaaaa);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #1b1b1b;
+    margin: 0;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    margin-left: 2vw;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4285f4;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #345db5;
+}
+
+.navbar-toggler-icon {
+    background-color: #4285f4;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #345db5;
+}
+
+.navbar-nav.ml-auto .nav-link {
+    font-weight: bold;
+}
+
+.navbar-scrolled {
+    background-color: #f8f9fa;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Link Effect */
+.navbar-nav .nav-item, .navbar-nav.ml-auto .nav-link {
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover, .navbar-nav.ml-auto .nav-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Slider Styles */
+.sliderconteneur {
+    max-width: 90%;
+    margin: 10vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-lg {
+    padding: 15px 30px; /* Ajustez les valeurs de padding selon vos préférences */
+    font-size: 18px; /* Ajustez la taille de la police selon vos préférences */
+    box-shadow: 0 0 3px rgba(84, 84, 160, 0.418); /* Effet de lueur initial (bleu dans cet exemple) */
+    animation: glow 2s infinite alternate; /* Animation de lueur constante */
+}
+
+@keyframes glow {
+    to {
+        box-shadow: 0 0 20px rgba(126, 126, 235, 0.993); /* Effet de lueur au maximum (bleu dans cet exemple) */
+    }
+}
+
+
+/* Form Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4285f4;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #b1b1b1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+button:hover {
+    background-color: #345db5;
+}
+
+/* Specific Form Styles */
+form.upload-form,
+form.registration-form,
+form.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+/* Specific Form Button Styles */
+form.upload-form button,
+form.registration-form button,
+form.login-form button {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form.upload-form button:hover,
+form.registration-form button:hover,
+form.login-form button:hover {
+    background-color: #345db5;
+}

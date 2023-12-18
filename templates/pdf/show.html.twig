@@ -1,0 +1,19 @@
+{# templates/pdf/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}PDF Show{% endblock %}
+
+{% block body %}
+    <h1>Contenu PDF</h1>
+
+   
+
+    {% for result in results %}
+        <p>Résultat de la comparaison : {{ result['result'] }}</p>
+       
+    {% endfor %}
+     <div>
+      {{ html|raw }}
+    </div>
+{% endblock %}

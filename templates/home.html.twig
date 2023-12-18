@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Accueil {% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block body %}
+
+
+<body class="home-background">
+    <div class="sliderconteneur mx-auto d-flex align-items-center">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="3000"> <!-- Ajoutez data-interval pour l'autoplay -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('assets/img/cabinet-comptable.jpg') }}" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item"> <!-- Utilisez "carousel-item" au lieu de "carousel-item active" pour les éléments suivants -->
+                    <img src="{{ asset('assets/img/cabinet-comptabl.jpg') }}" class="d-block w-100" alt="Image 2">
+                </div>
+                <!-- Ajoutez d'autres éléments carousel-item au besoin -->
+           </div>
+        </div>
+        <div class="container text-black">
+            <div class="row">
+                <div class="col-md-12">
+                       <a href="{{ path('app_contact') }}" class="btn btn-primary btn-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# Ajoutez le script JavaScript pour initialiser le carrousel avec l'autoplay #}
+    <script>
+        // Initialiser le slider avec l'autoplay
+        $(document).ready(function() {
+            $('#carouselExample').carousel();
+        });
+    </script>
+</body>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {# Inclure les scripts spécifiques au slider si nécessaire #}
+    <script>
+        // Initialiser le slider ici
+        $(document).ready(function() {
+            $('#carouselExample').carousel();
+        });
+    </script>
+{% endblock %}
